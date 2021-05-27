@@ -118,7 +118,6 @@ resource "aws_instance" "mike_instance" {
   }*/
   provisioner "remote-exec" {
     inline = [
-      "sudo apt-get -qq install python -y",
       "mkdir -p ~/.ssh", 
       "ssh-keygen -f ~/.ssh/ssh_test -N '' -t rsa"
     ]
